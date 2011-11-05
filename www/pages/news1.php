@@ -1,0 +1,2 @@
+﻿<h1>New Core</h1><br />
+<b>The server is now running a new and improved server core powered by some of the least retarded technologies available, to ensure you have the most retarded experience! Enjoy!!!</b>

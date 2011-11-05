@@ -1,0 +1,25 @@
+@charset "utf-8";
+.themerow {
+	padding-top:20px;
+	width:87px;
+	height:20px;
+	vertical-align:bottom;
+	float:right;
+}
+div.inline {
+	float:left;
+	height:20px;
+	width:15px;
+	background:#333;
+	margin:2px;
+	padding-left:10px;
+	padding-top:5px;
+}
+div#preloaded-images {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px; 
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+}

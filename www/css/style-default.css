@@ -1,0 +1,72 @@
+@charset "utf-8";
+* {
+	margin:0;
+}
+a:visited {
+	color:#09F;
+}
+a:link {
+	color:#09F;
+}
+a:hover {
+	color:#0CF;
+}
+a {
+	text-decoration: none;
+	color:#09F;
+}
+a:active {
+	color:#09F;
+}
+body {
+	background:url(../images/arthas.png) no-repeat #101010 fixed top left;
+	background-size: 100%;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:10px;
+	color:#FFF;
+}
+h1 {
+	font-weight:bold;
+	font-size:12px;
+	color:#0CF;
+}
+#header {
+	width:455px;
+	height:101px;
+	background:url(../images/logo.png) no-repeat;
+	background-size: 300px 100px;
+	margin:0 auto;
+	vertical-align:bottom;
+	text-align:left;
+}
+#navigation {
+	width:590px;
+	height:35px;
+	background:url(../images/navigation.png) no-repeat;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	padding-top:35px;
+	padding-left:15px;
+	padding-right:30px;
+	margin:0 auto;
+}
+#content {
+	width:601px;
+	height:100%;
+	background:url(../images/content.png) repeat-y;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:20px;
+	padding-bottom:10px;
+	margin:0 auto;
+}
+#footer {
+	background:url(../images/navigation.png) no-repeat;
+	width:590px;
+	height:35px;
+	padding-top:35px;
+	padding-left:15px;
+	padding-right:30px;
+	margin:0 auto;
+}

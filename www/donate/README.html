@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Readme</title>
+</head>
+
+<body style="border-bottom:#000000 solid 1px;">
+<h1>Readme</h1>
+<p>This page contains information on how to set up and run your donation system.</p>
+<h3>Installation</h3>
+<ol>
+	<li>Execute the following queries to your webserver's MySQL database.<br />
+		<textarea readonly="readonly" cols="50" rows="5" >
+CREATE TABLE `log` (                                      
+  `entry` int(10) unsigned NOT NULL auto_increment,       
+  `email` varchar(32) default NULL,                       
+  `txn_id` varchar(32) default NULL,                      
+  `date` datetime default NULL,                           
+  `status` varchar(16) default NULL,                      
+  `amount` float unsigned default NULL,                   
+  `info` blob,                                            
+  PRIMARY KEY  (`entry`)                                  
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+CREATE TABLE `realms` (                                  
+  `entry` int(10) unsigned NOT NULL auto_increment,      
+  `name` varchar(32) default NULL,                       
+  `sqlhost` varchar(32) default NULL,                    
+  `sqluser` varchar(32) default NULL,                    
+  `sqlpass` varchar(32) default NULL,                    
+  `chardb` varchar(32) default NULL,                     
+  PRIMARY KEY  (`entry`)                                 
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+CREATE TABLE `rewards` (                                 
+   `entry` int(10) unsigned NOT NULL auto_increment,      
+   `name` varchar(32) default NULL,                       
+   `realm` int(10) unsigned default NULL,                 
+   `description` text,                                    
+   `item1` int(10) unsigned default NULL,                 
+   `quantity1` tinyint(3) unsigned default NULL,          
+   `item2` int(10) unsigned default NULL,                 
+   `quantity2` tinyint(3) unsigned default NULL,          
+   `item3` int(10) unsigned default NULL,                 
+   `quantity3` tinyint(3) unsigned default NULL,          
+   `gold` int(10) unsigned default NULL,                  
+   `price` float unsigned default NULL,                   
+   PRIMARY KEY  (`entry`)                                 
+ ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+		</textarea></li>
+	<li>In the "realms" table, enter each realm that the system will serve. Entries should start at 1. The "sql" fields should point to the realm's character database.</li>
+	<li>In the "rewards" table, enter the rewards you want to be delivered on each realm. Entries should start at 1. The "realm" field should be the entry in the "realms" table of the realm you want the reward to be on. "item" and "quantity" fields are the item id and quantity. Leave them blank for no item. "gold" is the amount of money in copper included in the reward. "price" is the donation amount to receive the reward. It is counted in the currency you define in the config file.</li>
+	<li>Open your config.php file and edit the data between quotation marks. More information is inside. Keep this file secure.</li>
+	<li>Once you are finished, go to the index.php file in your web browser to make sure everything works.</li>
+	<li>It is recommended that you test the system before using it. You can do this with a real PayPal purchase, or you can use the PayPal sandbox.</li>
+</ol>
+<h3>Operation</h3>
+<ul>
+	<li>Users donate from the index.php file.</li>
+	<li>If the payment is successfully processed, the reward will be delivered to the players mailbox.</li>
+	<li>To check the logs, go to /acp and log in with the information in your config file. There you can search through payment logs.</li>
+	<li>If a donation fails, possibly due to a nonexistant character or tampering with the form information, you can check the "failed" payment logs.</li>
+	<li>"Invalid" payments should be treated as suspicious and investigated.</li>
+</ul>
+<h3>Misc.</h3>
+<ul>
+	<li>Use at your own risk. The author is not responsible for any damage caused or money lost due to use of this system.</li>
+	<li>Please report any errors you find. This ensures that other people using this system will not have any problems either.</li>
+	<li>Do not redistribute without the author's permission. This ensures that other users can easily find the latest version.</li>
+	<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/80x15.png"/></a><br/><span xmlns:dc="http://purl.org/dc/elements/1.1/" >Ascent Autonomous PHP Donation Reward Delivery System</span> by <span xmlns:cc="http://creativecommons.org/ns#">1337D00D (Wesley W.)</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License</a>.</li>
+</ul>
+
+</body>
+</html>
