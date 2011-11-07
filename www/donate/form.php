@@ -130,7 +130,7 @@
           -->
           <input type="hidden" name="add" value="1" />
           <input type="hidden" name="cmd" value="_cart" />
-          <input type="hidden" name="notify_url" value="<?php echo SITE_URL.SYS_PATH?>postback.php" />
+          <input type="hidden" name="notify_url" value="<?php echo SITE_URL.SYS_PATH?>/postback.php" />
           <input type="hidden" id="item_name" name="item_name" value="" />
           <input type="hidden" id="amount" name="amount" value="" />
           <input type="hidden" id="item_number" name="item_number" value="" />
