@@ -1,7 +1,6 @@
 ﻿<?php
 function parsestats() 
 {
-	global $dbhost, $dbuser, $dbpass, $dbcselect;
 	mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($dbcselect);
 	mysql_query("SET NAMES 'utf8';");
