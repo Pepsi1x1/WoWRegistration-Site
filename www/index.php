@@ -1,5 +1,5 @@
-<?php include('../admin/config.php') ?>
-<?php include('pages/header.php') ?>
+<?php require_once('../admin/config.php') ?>
+<?php require_once('pages/header.php') ?>
 <?php 
 if( isset( $_GET['p']) )
 {
@@ -8,6 +8,6 @@ if( !file_exists("pages/{$page}.php") )
 $page = 'index';
 }
 else $page = 'news';
-include( "pages/{$page}.php" ); 
+require_once( "pages/{$page}.php" ); 
 ?>
-<?php include('pages/footer.php') ?>
+<?php require_once('pages/footer.php') ?>
