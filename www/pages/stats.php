@@ -1,5 +1,5 @@
 ﻿<?php
-function parsestats() 
+function parsestats($dbhost, $dbuser, $dbpass,$dbcselect) 
 {
 	mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($dbcselect);
@@ -118,6 +118,6 @@ function parsestats()
 ?>
 <div id="content">
 <center><h1>Realm stats</h1><br />
-<p><?php echo "<a href='#'>$servername</a>" . " <br /> " . parsestats(); ?></p>
+<p><?php echo "<a href='#'>$servername</a>" . " <br /> " . parsestats($dbhost, $dbuser, $dbpass,$dbcselect); ?></p>
 </center>
 </div>
