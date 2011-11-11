@@ -44,10 +44,10 @@ $template = 'default';
 </div>
 <div id="navigation"><?php include('navigation.php') ?></div>
 <div id="preloaded-images">
-   <img src="../images/arthas.png" width="1" height="1" alt="Image 01" />
-   <img src="../images/ragnaros.png" width="1" height="1" alt="Image 02" />
-   <img src="../images/akama.png" width="1" height="1" alt="Image 03" />
-   <img src="../images/illidan.png" width="1" height="1" alt="Image 04" />
-   <img src="../images/deathwing.png" width="1" height="1" alt="Image 05" />
-   <img src="../images/uludar.png" width="1" height="1" alt="Image 06" />
+   <img src="../images/arthas.jpg" width="1" height="1" alt="Image 01" />
+   <img src="../images/ragnaros.jpg" width="1" height="1" alt="Image 02" />
+   <img src="../images/akama.jpg" width="1" height="1" alt="Image 03" />
+   <img src="../images/illidan.jpg" width="1" height="1" alt="Image 04" />
+   <img src="../images/deathwing.jpg" width="1" height="1" alt="Image 05" />
+   <img src="../images/uludar.jpg" width="1" height="1" alt="Image 06" />
 </div>
